@@ -1,0 +1,22 @@
+.container-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background-color: #8c8c8c;
+}
+
+li {
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.logo {
+  width: 86px;
+}
