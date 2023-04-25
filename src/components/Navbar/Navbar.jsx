@@ -1,4 +1,4 @@
-import { Cartwidget } from "../Cartwidget/Cartwidget";
+import Cartwidget from "../Cartwidget/Cartwidget";
 import TallerdeAutos from "../../assets/img/pngwing.com.png";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
