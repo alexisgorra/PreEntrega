@@ -1,18 +1,35 @@
-import CartWidget from "../CartWidget/CartWidget";
+import { Cartwidget } from "../Cartwidget/Cartwidget";
+import TallerdeAutos from "../../assets/img/pngwing.com.png";
+import { Outlet, Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
-import imgLogo from "../../assets/images/pngwing.com.png";
-
 export const Navbar = () => {
   return (
-    <nav className="container-navbar">
-      <img className="logo" src={imgLogo} alt="Este es el logo de la empresa" />
-      <ul className="menu">
-        <li>Modelos</li>
-        <li>Repuestos</li>
-        <li>Novedades</li>
-        <li>Contacto</li>
-      </ul>
-      <CartWidget />
-    </nav>
+    <div className="navbar__cartwidget">
+      <div>
+        <div className="navbar">
+          <Link to="/">
+            {" "}
+            <img src={TallerdeAutos} className="navbar__logo" alt="" />
+          </Link>
+          <ul className="navbar__links">
+            <NavLink to="/" className="navbar__li">
+              Todos los autos
+            </NavLink>
+            <NavLink to="/category/Nissan" className="navbar__li">
+              Nissan
+            </NavLink>
+            <NavLink to="/category/BMW" className="navbar__li">
+              BMW
+            </NavLink>
+            <NavLink to="/category/novedades" className="navbar__li">
+              Novedades
+            </NavLink>
+          </ul>
+          <Cartwidget />
+        </div>
+
+        <Outlet />
+      </div>
+    </div>
   );
 };

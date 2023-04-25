@@ -1,12 +1,10 @@
-import { BsFillCartCheckFill } from "react-icons/bs";
+import CarritoImg from "../../assets/img/cartwidget.png";
 
-const CartWidget = () => {
+export const Cartwidget = () => {
   return (
     <div>
-      <BsFillCartCheckFill size={30} color="white" />
-      <span>5</span>
+      <img src={CarritoImg} alt="" />
+      <span>1</span>
     </div>
   );
 };
-
-export default CartWidget;

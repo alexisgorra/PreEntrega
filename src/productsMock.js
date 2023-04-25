@@ -1,0 +1,38 @@
+export const products = [
+  {
+    id: 1,
+    title: "Nissan Skyline GT R R33 Nismo 400R",
+    price: 900000,
+    stock: 5,
+    description: "Nissan Skyline GT-R R33 Nismo 400R",
+    category: "Nissan",
+    img: "https://res.cloudinary.com/dvhmueogp/image/upload/v1682257604/Nissan-Skyline-GT-R-R33-Nismo-400R_adkz65.jpg",
+  },
+  {
+    id: 2,
+    title: "Nissan 370z Nismo",
+    price: 500000,
+    stock: 10,
+    description: "2020 Nissan 370Z NISMO Philippines",
+    category: "Nissan",
+    img: "https://res.cloudinary.com/dvhmueogp/image/upload/v1682257604/2015_nissan_nismo_370z_01_0_fc6znn.jpg",
+  },
+  {
+    id: 3,
+    title: "BMW 03 E36M3 lightweight",
+    price: 320000,
+    stock: 15,
+    description: "BMW E36 M3 Lightweight",
+    category: "BMW",
+    img: "https://res.cloudinary.com/dvhmueogp/image/upload/v1682257605/gallery-1486135962-screen-shot-2017-02-03-at-103225-am_vveutb.png",
+  },
+  {
+    id: 4,
+    title: "1994 Nissan Skyline GT-R JGTCC-GT1",
+    price: 6057774800,
+    stock: 1,
+    description: "1994 Nissan Skyline GT-R 'JGTCC-GT1'",
+    category: "Nissan",
+    img: "https://res.cloudinary.com/dvhmueogp/image/upload/v1682257604/1994-Nissan-Skyline-GT-R--JGTCC-GT1--by-Hasemi-Motorsport1272180__bk0mzu.jpg",
+  },
+];
