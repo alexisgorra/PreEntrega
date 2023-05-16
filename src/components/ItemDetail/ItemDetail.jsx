@@ -1,18 +1,47 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import "./ItemDetail.css";
+import CounterContainer from "../Counter/CounterContainer";
+import styles from "./ItemDetail.css";
 
-export const ItemDetail = ({ product }) => {
-    return (
-        <div className="itemDetail">
-            <img src={product.img} className="imgDetail" alt="" />
-            <h2 className="titulos">{product.title}</h2>
-            <h2 className="titulos">{product.description}</h2>
-            <h2 className="titulos">${product.price}.-</h2>
-            <Link to="/">
-                <Button variant="outlined">Volver al home</Button>
-            </Link>
+export const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
+  return (
+    <div>
+      <div className={styles.containerItemDetail}>
+        <div className={styles.containerImage}>
+          <img src={product.img} alt="" />
         </div>
-    );
+
+        <div className={styles.containerDetail}>
+          <h2 style={{ fontFamily: "monospace" }}>
+            <span style={{ fontSize: "23px" }}>Nombre:</span> {product.title}
+          </h2>
+          <h2 style={{ fontFamily: "monospace" }}>
+            <span style={{ fontSize: "23px" }}>Descripcion:</span>{" "}
+            {product.description}
+          </h2>
+          <h2 style={{ fontFamily: "monospace" }}>
+            <span style={{ fontSize: "23px" }}>Precio:</span> ${product.price}.-
+          </h2>
+        </div>
+      </div>
+      {product.stock > 0 ? (
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <CounterContainer
+            stock={product.stock}
+            onAdd={onAdd}
+            initial={cantidadTotal}
+          />
+        </div>
+      ) : (
+        <h2>No hay stock</h2>
+      )}
+
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Link to="/">
+          <Button variant="contained">Regresar</Button>
+        </Link>
+      </div>
+    </div>
+  );
 };
